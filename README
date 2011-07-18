@@ -1,0 +1,39 @@
+Bubbaloo
+
+==================
+
+1. Introduction 
+2. Install
+
+==================
+
+1. Introduction
+
+A project for quantifying information filter bubbles.
+
+
+2. Install
+
+2.1 Dependencies
+
+Bubbaloo depends on tor and pytorctl. 
+Make sure that these are installed at your system.
+
+- Tor : http://torproject.org/
+- pytorctl : https://gitweb.torproject.org/pytorctl.git
+
+2.2 Configuration
+
+2.2.1 Tor
+
+You can use the standard Tor bundle. Go to settings and enable control protocol (port 9051).
+Also, in your torrc configuration file add 
+
+StrictNodes 1 
+
+2.2.2 Proxy
+
+Bubbaloo uses wget to send requests through the tor network. To do that you should set up a proxy
+(e.g. polipo) and set the proxy's parent to Tor's SOCKS proxy.
+
+For more details : http://www.pps.jussieu.fr/~jch/software/polipo/tor.html
